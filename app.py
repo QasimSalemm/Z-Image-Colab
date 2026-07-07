@@ -145,8 +145,8 @@ with gr.Blocks(theme=gr.themes.Soft(),css=custom_css) as demo:
     with gr.Column():
         download_image=gr.File(label="Download Image")
         output_img = gr.Image(label="Generated Image", height=480)
-        used_seed = gr.Textbox(label="Seed Used", interactive=False,show_copy_button=True)
-
+        #used_seed = gr.Textbox(label="Seed Used", interactive=False,show_copy_button=True)
+        used_seed = gr.Textbox(label="Seed Used", interactive=False)
     run.click(
         fn=generate_ui,
         inputs=[positive, negative, aspect, seed, steps, cfg, denoise,],
